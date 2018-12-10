@@ -20,8 +20,11 @@ class TodoApp extends Component {
 	addTodo()
 	{
 		//Ajouter au tableau this.state.list, le contenu du champ text
-		this.state.list.push(this.state.currentTodo)
-		this.render()
+		let currentTodo = this.state.currentTodo
+		this.state.list.push()
+		this.setState({
+			list : this.state.list.concat(currentTodo)
+		})
 
 	}
 
