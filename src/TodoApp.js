@@ -4,16 +4,19 @@ import './App.css';
 
 const TodoItem = (props) => <li>{props.description}</li>
 
+let todoList = ["Aller à la plage",
+				"Faire des courses",
+				"Ranger les courses",
+				"Faire la cuisine",
+				"Ranger la cuisine"]
+
 class TodoApp extends Component {
+	
 	render() {
     	return (
       		<div>
       			<ul>
-              <TodoItem description="Aller à la plage" />
-      				<TodoItem description="Faire des courses" />
-							<TodoItem description="Ranger les courses" />
-							<TodoItem description="Faire la cuisine" />
-							<TodoItem description="Ranger la cuisine" />
+              		{todoList.map(element => <TodoItem description={element}/>)}
       			</ul>
       		</div>
     	);
